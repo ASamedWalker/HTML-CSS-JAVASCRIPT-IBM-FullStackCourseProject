@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Financial Calculator</title>
+    </head>
+    <body>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+            <form action="" id="mainform">
+                <div>
+                    <label for="amount" class="title">Amount: </label>
+                    <input type="number"  id="principal">  <br/>
+                </div>
+                
+                <div>
+                    <label for="interest" class="title">Interest: </label>
+                    <Input type="range" id="rate" min="minval" max="maxval" value="default_val" id="result" onchange="updateRate()"><span id="rate_val">10.25%</span><br>
+                </div>
+               <div>
+                    <label for="years" class="title">No. of Years: </label>
+                    <select id="years"> </br>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select> 
+                </div>
+            </form>
+            <div class="submit">
+            <button onclick="compute(); return false">Compute Interest</button>
+            </div>
+
+            <span id="result" class="result">
+                If you deposit <mark><label id="depositmessage"></label></mark><br/>
+				at an interest rate of <mark><label id="interestmessage"></label></mark>.<br/>
+				You will receive an amount of <mark><label id="amountmessage"></label></mark>,<br/>
+				in the year <mark><label id="yearmessage"></label></mark>
+            </span>
+
+            <footer>
+                &#169; This Calculator belongs to Samed Walker
+            </footer>
+        </div>
+    </body>
+</html>
